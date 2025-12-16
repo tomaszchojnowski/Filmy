@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Filmy DVD">
+<title>Filmy DVD</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+input {
+  width: 100%;
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 16px;
+}
+
+.film {
+  padding: 12px 8px;
+  border-bottom: 1px solid #333;
+}
+
+.pl {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.org {
+  font-size: 18px;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+<h1>🎬 Filmy DVD</h1>
+
+<input id="search" placeholder="Szukaj filmu..." autofocus>
+
+<div id="list"></div>
+
+<script>
+const films = [
+  {pl:"Rycerze z Szanghaju", org:"Shanghai Knights", year:2003},
+  {pl:"Wersja ostateczna", org:"Paycheck", year:2003},
+  {pl:"U-571", org:"U-571", year:2000},
+  {pl:"Cienka czerwona linia", org:"The Thin Red Line", year:1998},
+  {pl:"Psy wojny", org:"The Dogs of War", year:1980},
+  {pl:"Jutro nie umiera nigdy", org:"Tomorrow Never Dies", year:1997},
+  {pl:"Any Given Sunday", org:"Any Given Sunday", year:1999},
+  {pl:"Odnaleźć przeznaczenie", org:"The Shipping News", year:2001},
+  {pl:"Pluton", org:"Platoon", year:1986},
+  {pl:"Cube²: Hypercube", org:"Cube²: Hypercube", year:2002},
+  {pl:"Cube Zero", org:"Cube Zero", year:2004},
+  {pl:"Nagła broń", org:"Sudden Death", year:1995},
+  {pl:"Gra", org:"The Game", year:1997},
+  {pl:"Titanic", org:"Titanic", year:1997},
+  {pl:"Rewolwer", org:"Revolver", year:2005},
+  {pl:"Cztery wesela i pogrzeb", org:"Four Weddings and a Funeral", year:1994},
+  {pl:"Francuski numerek", org:"French Kiss", year:1995},
+  {pl:"40-letni prawiczek", org:"The 40-Year-Old Virgin", year:2005},
+  {pl:"Postman", org:"The Postman", year:1997},
+  {pl:"Hannibal", org:"Hannibal", year:2001},
+  {pl:"Ja, robot", org:"I, Robot", year:2004},
+  {pl:"Fantastyczna Czwórka", org:"Fantastic Four", year:2005},
+  {pl:"Kalifornia", org:"Kalifornia", year:1993},
+  {pl:"Dzień Niepodległości", org:"Independence Day", year:1996},
+  {pl:"Equilibrium", org:"Equilibrium", year:2002},
+  {pl:"Sahara", org:"Sahara", year:2005},
+  {pl:"Dzień Świra", org:"Dzień Świra", year:2002},
+  {pl:"Obcy kontra Predator", org:"AVP: Alien vs. Predator", year:2004},
+  {pl:"Skazany na bluesa", org:"Skazany na bluesa", year:2005},
+  {pl:"Skazani na Shawshank", org:"The Shawshank Redemption", year:1994},
+  {pl:"Transporter", org:"The Transporter", year:2002},
+  {pl:"Transporter 2", org:"Transporter 2", year:2005},
+  {pl:"Buntownik z wyboru", org:"Good Will Hunting", year:1997},
+  {pl:"Ostatni samuraj", org:"The Last Samurai", year:2003},
+  {pl:"Aviator", org:"The Aviator", year:2004},
+  {pl:"Tombstone", org:"Tombstone", year:1993},
+  {pl:"Skarb Narodów", org:"National Treasure", year:2004},
+  {pl:"Wielki przekręt", org:"Snatch", year:2000},
+  {pl:"Efekt motyla", org:"The Butterfly Effect", year:2004}
+];
+
+function normalize(text) {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+const list = document.getElementById("list");
+const search = document.getElementById("search");
+
+function render(query = "") {
+  list.innerHTML = "";
+  const q = normalize(query);
+
+  films.forEach(film => {
+    const haystack = normalize(film.pl + " " + film.org + " " + film.year);
+    if (haystack.includes(q)) {
+      const div = document.createElement("div");
+      div.className = "film";
+      div.innerHTML = `
+        <div class="pl">${film.pl}</div>
+        <div class="org">${film.org} (${film.year})</div>
+      `;
+      list.appendChild(div);
+    }
+  });
+}
+
+search.addEventListener("input", e => render(e.target.value));
+render();
+</script>
+
+</body>
+</html>
