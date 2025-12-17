@@ -57,6 +57,11 @@ input {
   font-size: 22px;
   color: #5f5;
 }
+.genre {
+font-size: 12px;
+font-style: italic;
+color: #aaa;
+}
   
 </style>
 </head>
@@ -308,9 +313,111 @@ const films = [
   { pl:"Lot nad kukułczym gniazdem", org:"One Flew Over the Cuckoo’s Nest", year:1975, genre:"dramat", type:"film", folder:"IV", disk:63 },
   { pl:"300 mil do Graceland", org:"3000 Miles to Graceland", year:2001, genre:"akcja, kryminał", type:"film", folder:"IV", disk:66 },
   { pl:"Brudny Harry", org:"Dirty Harry", year:1971, genre:"kryminał, thriller", type:"film", folder:"IV", disk:70 },
-  { pl:"Niebezpieczna prędkość", org:"Speed", year:1994, genre:"akcja, thriller", type:"film", folder:"IV", disk:71 }
+  { pl:"Niebezpieczna prędkość", org:"Speed", year:1994, genre:"akcja, thriller", type:"film", folder:"IV", disk:71 },
 
+// ====== folder v ====== Grok
+  
+{ pl:"Charlie Chaplin", org:"The Gold Rush", year:1925, genre:"komedia", type:"film", folder:"V", disk:1 },
+{ pl:"Miasto kobiet", org:"City of Women", year:1980, genre:"komedia, dramat", type:"film", folder:"V", disk:2 },
+{ pl:"Katyń", org:"Katyn", year:2007, genre:"dramat, wojenny", type:"film", folder:"V", disk:3 },
+{ pl:"Wyklęty", org:"The Cursed", year:2017, genre:"dramat, wojenny", type:"film", folder:"V", disk:4 },
+{ pl:"Dzień Świstaka", org:"Groundhog Day", year:1993, genre:"komedia, fantasy", type:"film", folder:"V", disk:5 },
+{ pl:"Funny Money", org:"Funny Money", year:2006, genre:"komedia", type:"film", folder:"V", disk:6 },
+{ pl:"Życie zaczyna się po 40-stce", org:"Life Begins at Forty", year:1978, genre:"komedia", type:"film", folder:"V", disk:7 },
+{ pl:"Bezprawie", org:"Open Range", year:2003, genre:"western", type:"film", folder:"V", disk:8 },
+{ pl:"Granice wytrzymałości – K-2", org:"K2", year:1991, genre:"przygodowy, dramat", type:"film", folder:"V", disk:9 },
+{ pl:"Mickey – niebieskooki", org:"Mickey Blue Eyes", year:1999, genre:"komedia", type:"film", folder:"V", disk:10 },
+{ pl:"Transformers", org:"Transformers", year:2007, genre:"akcja, sci-fi", type:"film", folder:"V", disk:11 },
+{ pl:"Cela", org:"The Cell", year:2000, genre:"sci-fi, thriller", type:"film", folder:"V", disk:12 },
+{ pl:"Fałszerze", org:"The Counterfeiters", year:2007, genre:"dramat, wojenny", type:"film", folder:"V", disk:13 },
+{ pl:"Zielona mila", org:"The Green Mile", year:1999, genre:"dramat, fantasy", type:"film", folder:"V", disk:14 },
+{ pl:"Złamanie życia", org:"Breaking Life", year:0, genre:"dramat", type:"serial", folder:"V", disk:15 },
+{ pl:"Milczenie owiec", org:"The Silence of the Lambs", year:1991, genre:"thriller", type:"film", folder:"V", disk:16 },
+{ pl:"Matrix Rewolucje", org:"The Matrix Revolutions", year:2003, genre:"akcja, sci-fi", type:"film", folder:"V", disk:17 },
+{ pl:"Wyrok", org:"Conviction", year:2010, genre:"dramat", type:"film", folder:"V", disk:18 },
+{ pl:"Osada", org:"The Village", year:2004, genre:"thriller", type:"film", folder:"V", disk:19 },
+{ pl:"Departament Wandalach", org:"V for Vendetta", year:2005, genre:"akcja, sci-fi", type:"film", folder:"V", disk:20 },
+{ pl:"Zróbmy sobie wnuka", org:"Let's Make a Grandson", year:2003, genre:"komedia", type:"film", folder:"V", disk:21 },
+{ pl:"Na tropie zbrodni Pantery", org:"The Pink Panther", year:2006, genre:"komedia", type:"film", folder:"V", disk:22 },
+{ pl:"Godziny szczytu", org:"Rush Hour", year:1998, genre:"akcja, komedia", type:"film", folder:"V", disk:23 },
+{ pl:"Człowiek pies", org:"Dogman", year:2018, genre:"dramat", type:"film", folder:"V", disk:24 },
+{ pl:"Pan Papier", org:"Paper Man", year:2009, genre:"komedia, dramat", type:"film", folder:"V", disk:25 },
+{ pl:"Żandarm na emeryturze", org:"Le Gendarme en Balade", year:1970, genre:"komedia", type:"film", folder:"V", disk:26 },
+{ pl:"Śmiertelne polowanie", org:"Deadly Prey", year:1987, genre:"akcja", type:"film", folder:"V", disk:27 },
+{ pl:"Benny Hill", org:"The Benny Hill Show", year:1969, genre:"komedia", type:"serial", folder:"V", disk:28 },
+{ pl:"Gruby i chudszy II", org:"Nutty Professor II: The Klumps", year:2000, genre:"komedia", type:"film", folder:"V", disk:29 },
+{ pl:"Anna Frank", org:"The Diary of Anne Frank", year:1959, genre:"dramat", type:"film", folder:"V", disk:30 },
+{ pl:"Szklana", org:"The Glass House", year:2001, genre:"thriller", type:"film", folder:"V", disk:31 },
+{ pl:"20 tys. mil podm. żeglugi", org:"20,000 Leagues Under the Sea", year:1954, genre:"przygodowy", type:"film", folder:"V", disk:32 },
+{ pl:"Klucz", org:"The Key", year:1958, genre:"dramat", type:"film", folder:"V", disk:33 },
+{ pl:"Człowiek z blizną", org:"Scarface", year:1983, genre:"dramat, kryminał", type:"film", folder:"V", disk:34 },
+{ pl:"Indiana Jones – Ostatnia krucjata", org:"Indiana Jones and the Last Crusade", year:1989, genre:"przygodowy", type:"film", folder:"V", disk:35 },
+{ pl:"Zemsta Szeryfa", org:"Sheriff's Revenge", year:0, genre:"western", type:"film", folder:"V", disk:36 },
+{ pl:"Czerwony smok", org:"Red Dragon", year:2002, genre:"thriller", type:"film", folder:"V", disk:37 },
+{ pl:"Krzyżacy", org:"Knights of the Teutonic Order", year:1960, genre:"przygodowy, dramat", type:"film", folder:"V", disk:38 },
+{ pl:"Zrób sobie wnuka", org:"Let's Make a Grandson", year:2003, genre:"komedia", type:"film", folder:"V", disk:39 },
+{ pl:"Zaginiony w dżungli", org:"Lost in the Jungle", year:2010, genre:"przygodowy", type:"film", folder:"V", disk:40 },
+{ pl:"Desperat I–II", org:"Desperado", year:1995, genre:"akcja", type:"film", folder:"V", disk:41 },
+{ pl:"Ptaki", org:"The Birds", year:1963, genre:"horror", type:"film", folder:"V", disk:42 },
+{ pl:"Dr T", org:"Dr. T & the Women", year:2000, genre:"komedia", type:"film", folder:"V", disk:43 },
+{ pl:"Konsul", org:"The Consul", year:1989, genre:"komedia", type:"film", folder:"V", disk:44 },
+{ pl:"Nagi instynkt", org:"Basic Instinct", year:1992, genre:"thriller", type:"film", folder:"V", disk:45 },
+{ pl:"Blink", org:"Blink", year:1993, genre:"thriller", type:"film", folder:"V", disk:46 },
+{ pl:"Krwawa profesja", org:"Blood Work", year:2002, genre:"kryminał", type:"film", folder:"V", disk:47 },
 
+  // ==== katalog VI GROk
+  
+{ pl:"Naciągacze", org:"Matchstick Men", year:2003, genre:"komedia, kryminał", type:"film", folder:"VI", disk:1 },
+{ pl:"Jak rozpętałem II wojnę światową", org:"How I Unleashed World War II", year:1970, genre:"komedia, wojenny", type:"film", folder:"VI", disk:2 },
+{ pl:"Na krawędzi", org:"Cliffhanger", year:1993, genre:"akcja", type:"film", folder:"VI", disk:3 },
+{ pl:"Full Metal Jacket", org:"Full Metal Jacket", year:1987, genre:"dramat, wojenny", type:"film", folder:"VI", disk:4 },
+{ pl:"Diament z pętli", org:"Ashes and Diamonds", year:1958, genre:"dramat", type:"film", folder:"VI", disk:5 },
+{ pl:"Duch i mrok", org:"The Ghost and the Darkness", year:1996, genre:"przygodowy", type:"film", folder:"VI", disk:6 },
+{ pl:"Wyspa skarbów", org:"Treasure Island", year:1990, genre:"przygodowy", type:"film", folder:"VI", disk:7 },
+{ pl:"Auta", org:"Cars", year:2006, genre:"animowany, komedia", type:"film", folder:"VI", disk:8 },
+{ pl:"Wesele", org:"The Wedding", year:2004, genre:"komedia, dramat", type:"film", folder:"VI", disk:9 },
+{ pl:"Prawo Bronksu", org:"A Bronx Tale", year:1993, genre:"dramat, kryminał", type:"film", folder:"VI", disk:10 },
+{ pl:"Tylko idioci idą do kina", org:"Only Fools Go to the Cinema", year:0, genre:"komedia", type:"film", folder:"VI", disk:11 },
+{ pl:"Ciemno", org:"Dark", year:0, genre:"dramat", type:"film", folder:"VI", disk:12 },
+{ pl:"Czekając na wyrok", org:"Monster's Ball", year:2001, genre:"dramat", type:"film", folder:"VI", disk:13 },
+{ pl:"451° Fahrenheita", org:"Fahrenheit 451", year:1966, genre:"sci-fi, dramat", type:"film", folder:"VI", disk:14 },
+{ pl:"Psychoza", org:"Psycho", year:1960, genre:"horror, thriller", type:"film", folder:"VI", disk:15 },
+{ pl:"Papierz, który został ojcem", org:"Paper Moon", year:1973, genre:"komedia, dramat", type:"film", folder:"VI", disk:16 },
+{ pl:"Nieugięci", org:"The Untouchables", year:1987, genre:"kryminał", type:"film", folder:"VI", disk:17 },
+{ pl:"Królestwo", org:"The Kingdom", year:2007, genre:"akcja", type:"film", folder:"VI", disk:18 },
+{ pl:"Nikodem Dyzma", org:"The Career of Nikos Dyzma", year:2002, genre:"komedia", type:"film", folder:"VI", disk:19 },
+{ pl:"Cicha miła", org:"The Quiet American", year:2002, genre:"dramat", type:"film", folder:"VI", disk:20 },
+{ pl:"Tożsamość Bourna", org:"The Bourne Identity", year:2002, genre:"akcja, thriller", type:"film", folder:"VI", disk:21 },
+{ pl:"Więcej niż…", org:"More Than This", year:0, genre:"dramat", type:"film", folder:"VI", disk:22 },
+{ pl:"Woda wiecznie żywa", org:"Tuck Everlasting", year:2002, genre:"dramat, fantasy", type:"film", folder:"VI", disk:23 },
+{ pl:"Wejście smoka", org:"Enter the Dragon", year:1973, genre:"akcja", type:"film", folder:"VI", disk:24 },
+{ pl:"Chłop, który gonił swój czas", org:"Clockwise", year:1986, genre:"komedia", type:"film", folder:"VI", disk:25 },
+{ pl:"Miecz kamienia", org:"The Sword in the Stone", year:1963, genre:"animowany", type:"film", folder:"VI", disk:26 },
+{ pl:"E = mc²", org:"E=mc2", year:2002, genre:"komedia", type:"film", folder:"VI", disk:27 },
+{ pl:"Piraci Karaibów I", org:"Pirates of the Caribbean: The Curse of the Black Pearl", year:2003, genre:"przygodowy", type:"film", folder:"VI", disk:28 },
+{ pl:"Piraci Karaibów II", org:"Pirates of the Caribbean: Dead Man's Chest", year:2006, genre:"przygodowy", type:"film", folder:"VI", disk:29 },
+{ pl:"Batman – Mroczny Rycerz", org:"The Dark Knight", year:2008, genre:"akcja", type:"film", folder:"VI", disk:30 },
+{ pl:"Edison", org:"Edison", year:2005, genre:"kryminał", type:"film", folder:"VI", disk:31 },
+{ pl:"—", org:"", year:0, genre:"", type:"", folder:"VI", disk:32 },
+{ pl:"Biały Oleander", org:"White Oleander", year:2002, genre:"dramat", type:"film", folder:"VI", disk:33 },
+{ pl:"Głód i wściekłość", org:"Raging Bull", year:1980, genre:"dramat", type:"film", folder:"VI", disk:34 },
+{ pl:"Hidalgo – Ocean ognia", org:"Hidalgo", year:2004, genre:"przygodowy", type:"film", folder:"VI", disk:35 },
+{ pl:"Raport mniejszości", org:"Minority Report", year:2002, genre:"sci-fi", type:"film", folder:"VI", disk:36 },
+{ pl:"Szeregowy Nowego Jorku", org:"Gangs of New York", year:2002, genre:"dramat", type:"film", folder:"VI", disk:37 },
+{ pl:"Feniks – jak dziecko nocy", org:"Flight of the Phoenix", year:2004, genre:"przygodowy", type:"film", folder:"VI", disk:38 },
+{ pl:"Kromki Ridicka", org:"The Chronicles of Riddick", year:2004, genre:"sci-fi", type:"film", folder:"VI", disk:39 },
+{ pl:"Co zdarzyło się w Madison County", org:"The Bridges of Madison County", year:1995, genre:"dramat", type:"film", folder:"VI", disk:40 },
+{ pl:"Brat", org:"Brother", year:1997, genre:"kryminał", type:"film", folder:"VI", disk:41 },
+{ pl:"Ciało", org:"The Body", year:2003, genre:"komedia", type:"film", folder:"VI", disk:42 },
+{ pl:"Martwa cisza", org:"Dead Silence", year:2007, genre:"horror", type:"film", folder:"VI", disk:43 },
+{ pl:"Pierś Rodem", org:"From Hell", year:2001, genre:"horror, thriller", type:"film", folder:"VI", disk:44 },
+{ pl:"Seria niepokornych żołnierzy", org:"The Dirty Dozen", year:1967, genre:"wojenny", type:"film", folder:"VI", disk:45 },
+{ pl:"Gladiator", org:"Gladiator", year:2000, genre:"akcja", type:"film", folder:"VI", disk:46 },
+{ pl:"Zabić króla", org:"To Kill a King", year:2003, genre:"dramat", type:"film", folder:"VI", disk:47 },
+{ pl:"Nikifor", org:"My Nikifor", year:2004, genre:"biograficzny", type:"film", folder:"VI", disk:48 },
+{ pl:"Ocean strachu III", org:"Open Water 3: Cage Dive", year:2017, genre:"horror", type:"film", folder:"VI", disk:49 },
+{ pl:"Poirot", org:"Poirot", year:1989, genre:"kryminał", type:"serial", folder:"VI", disk:50 }
+  
 
   
 
@@ -382,7 +489,7 @@ function render(query = "") {
       div.className = "film";
       div.innerHTML = `
         <div class="pl">${film.pl}</div>
-        <div class="org">${film.org} (${film.year})</div>
+        <div class="org">${film.org} (${film.year}) <i>(${film.genre})</i></div>
         <div class="folder-body">Katalog <b class="folder">${film.folder}</b> : Dysk <b class="disk">${film.disk}</b></div>
       `;
       list.appendChild(div);
