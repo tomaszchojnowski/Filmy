@@ -45,13 +45,17 @@ input {
   font-size: 18px;
   color: #aaa;
 }
+.folder-body {
+  font-size: 18px;
+  color: #aaa;
+}
 .disk {
-  font-size: 20px;
-  color: #bbb;
+  font-size: 22px;
+  color: #fcc;
 }
 .folder {
-  font-size: 18px;
-  color: #bfb;
+  font-size: 22px;
+  color: #cfc;
 }
   
 </style>
@@ -135,7 +139,7 @@ function render(query = "") {
       div.innerHTML = `
         <div class="pl">${film.pl}</div>
         <div class="org">${film.org} (${film.year})</div>
-        <div class="folder">Katalog ${film.folder} : Dysk <b class="disk">${film.disk}</b></div>
+        <div class="folder-body">Katalog <b class="folder">${film.folder}</b> : Dysk <b class="disk">${film.disk}</b></div>
       `;
       list.appendChild(div);
     }
