@@ -57,62 +57,51 @@ input {
 
 <script>
 const films = [
-  {
-    pl: "Dzień Niepodległości",
-    org: "Independence Day",
-    year: 1996,
-    folder: "III",
-    disk: 18
-  },
-  {
-    pl: "Equilibrium",
-    org: "Equilibrium",
-    year: 2002,
-    folder: "III",
-    disk: 19
-  },
-  {
-    pl: "Sahara",
-    org: "Sahara",
-    year: 2005,
-    folder: "III",
-    disk: 20
-  },
-  {
-    pl: "Dzień Świra",
-    org: "Dzień Świra",
-    year: 2002,
-    folder: "III",
-    disk: 21
-  },
-  {
-    pl: "Chéri",
-    org: "Chéri",
-    year: 2009,
-    folder: "III",
-    disk: 22
-  },
-  {
-    pl: "Droga przez piekło",
-    org: "The Deer Hunter",
-    year: 1978,
-    folder: "III",
-    disk: 23
-  },
-  {
-    pl: "Obcy kontra Predator",
-    org: "AVP: Alien vs. Predator",
-    year: 2004,
-    folder: "III",
-    disk: 24
-  },
-  {
-    pl: "Skazany na bluesa",
-    org: "Skazany na bluesa",
-    year: 2005,
-    folder: "III",
-    disk: 25
-  }
+
+  // ===== FOLDER I =====
+  { pl:"Rycerze z Szanghaju", org:"Shanghai Knights", year:2003, folder:"I", disk:1 },
+  { pl:"Wersja ostateczna", org:"Paycheck", year:2003, folder:"I", disk:2 },
+  { pl:"U-571", org:"U-571", year:2000, folder:"I", disk:3 },
+  { pl:"Cienka czerwona linia", org:"The Thin Red Line", year:1998, folder:"I", disk:4 },
+  { pl:"Psy wojny", org:"The Dogs of War", year:1980, folder:"I", disk:5 },
+  { pl:"Jutro nie umiera nigdy", org:"Tomorrow Never Dies", year:1997, folder:"I", disk:6 },
+  { pl:"Any Given Sunday", org:"Any Given Sunday", year:1999, folder:"I", disk:7 },
+  { pl:"Odnaleźć przeznaczenie", org:"The Shipping News", year:2001, folder:"I", disk:8 },
+  { pl:"Pluton", org:"Platoon", year:1986, folder:"I", disk:17 },
+
+  // ===== FOLDER II =====
+  { pl:"Gra", org:"The Game", year:1997, folder:"II", disk:52 },
+  { pl:"Titanic", org:"Titanic", year:1997, folder:"II", disk:53 },
+  { pl:"Rewolwer", org:"Revolver", year:2005, folder:"II", disk:55 },
+  { pl:"Cztery wesela i pogrzeb", org:"Four Weddings and a Funeral", year:1994, folder:"II", disk:56 },
+  { pl:"Francuski numerek", org:"French Kiss", year:1995, folder:"II", disk:59 },
+  { pl:"40-letni prawiczek", org:"The 40-Year-Old Virgin", year:2005, folder:"II", disk:62 },
+  { pl:"Postman", org:"The Postman", year:1997, folder:"II", disk:64 },
+  { pl:"Hannibal", org:"Hannibal", year:2001, folder:"II", disk:65 },
+  { pl:"Ja, robot", org:"I, Robot", year:2004, folder:"II", disk:66 },
+  { pl:"Fantastyczna Czwórka", org:"Fantastic Four", year:2005, folder:"II", disk:69 },
+  { pl:"Kalifornia", org:"Kalifornia", year:1993, folder:"II", disk:73 },
+
+  // ===== FOLDER III =====
+  { pl:"Dzień Niepodległości", org:"Independence Day", year:1996, folder:"III", disk:18 },
+  { pl:"Equilibrium", org:"Equilibrium", year:2002, folder:"III", disk:19 },
+  { pl:"Sahara", org:"Sahara", year:2005, folder:"III", disk:20 },
+  { pl:"Dzień Świra", org:"Dzień Świra", year:2002, folder:"III", disk:21 },
+  { pl:"Chéri", org:"Chéri", year:2009, folder:"III", disk:22 },
+  { pl:"Droga przez piekło", org:"The Deer Hunter", year:1978, folder:"III", disk:23 },
+  { pl:"Obcy kontra Predator", org:"AVP: Alien vs. Predator", year:2004, folder:"III", disk:24 },
+  { pl:"Skazany na bluesa", org:"Skazany na bluesa", year:2005, folder:"III", disk:25 },
+  { pl:"Skazani na Shawshank", org:"The Shawshank Redemption", year:1994, folder:"III", disk:40 },
+  { pl:"Transporter", org:"The Transporter", year:2002, folder:"III", disk:36 },
+  { pl:"Transporter 2", org:"Transporter 2", year:2005, folder:"III", disk:37 },
+  { pl:"Buntownik z wyboru", org:"Good Will Hunting", year:1997, folder:"III", disk:46 },
+  { pl:"Ostatni samuraj", org:"The Last Samurai", year:2003, folder:"III", disk:51 },
+  { pl:"Aviator", org:"The Aviator", year:2004, folder:"III", disk:52 },
+  { pl:"Tombstone", org:"Tombstone", year:1993, folder:"III", disk:53 },
+  { pl:"Skarb Narodów", org:"National Treasure", year:2004, folder:"III", disk:54 },
+  { pl:"Wielki przekręt", org:"Snatch", year:2000, folder:"III", disk:63 },
+  { pl:"Efekt motyla", org:"The Butterfly Effect", year:2004, folder:"III", disk:62 }
+
 ];
 
 function normalize(text) {
