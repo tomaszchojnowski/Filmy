@@ -137,6 +137,8 @@ function render(query = "") {
       div.innerHTML = `
         <div class="pl">${film.pl}</div>
         <div class="org">${film.org} (${film.year})</div>
+        <div class="org">${film.org} (${film.folder})</div>
+        <div class="org">${film.org} (${film.disk})</div>
       `;
       list.appendChild(div);
     }
